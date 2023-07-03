@@ -1,0 +1,134 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+*,
+::before,
+::after {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    
+    /* (main background) */
+    --Very-dark-blue : hsl(233, 47%, 7%);
+    /* (card background) */
+    --Dark-desaturated-blue : hsl(244, 38%, 16%);
+    /* (accent) */
+    --Soft-violet: hsl(277, 64%, 61%);
+
+    /* (main heading, stats) */
+    --White : hsl(0, 0%, 100%);
+    /* (main paragraph) */
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    /* (stat headings) */
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+
+    --Font-size: 15px
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: var(--Font-size);
+    background-color: var(--Very-dark-blue);
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    border-radius: 0 .5em .5em 0;
+    position: relative;
+    width: 480px;
+    height: 400px;
+    filter: invert(12%) sepia(80%) saturate(400%) hue-rotate(230deg) brightness(50%) contrast(100%);
+}
+
+.stats {
+    color: var(--White);
+    background-color: var(--Dark-desaturated-blue);
+    padding: 4em 8em 4em 4em;
+    border-radius: .5em 0 0 .5em;
+}
+
+h1 {
+    font-family: 'Inter';
+}
+
+h1 span {
+    color: var(--Soft-violet);
+}
+
+.descriptions {
+    font-size: 12px;
+    line-height: 1.75em;
+    font-family: 'Lexend Deca';
+    padding: 2em 0 6em 0;
+    color: var(--Slightly-transparent-white);
+}
+
+.accumulation {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+    font-family: 'Lexend Deca';
+    text-transform: uppercase;
+    font-size: 10px;
+    color: var(--Slightly-transparent-white);
+    letter-spacing: 1px;
+}
+
+.accumulation  span {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lexend Deca';
+    font-weight: 700;
+    font-size: 2em !important;
+    color: var(--White);
+    letter-spacing: normal;
+    padding-bottom: 6px;
+    text-transform: none;
+}
+
+@media (max-width: 1000px) {
+
+    .container {
+        height: 100vh;
+    }
+    
+    .flex-row {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+     
+    .stats {
+        border-radius: 0 0 .5em .5em;
+        padding: 3em 0 3em 0;
+    }
+
+    .descriptions {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: .95em;
+        padding-top: 2em;
+        padding-bottom: 4em;
+    }
+
+    img {    
+        border-radius: .5em .5em 0 0;
+        width: 400px;
+        height: 300px;
+    }
+
+    .accumulation {
+        display: flex;
+        flex-direction: column;
+        font-size: .85em;
+    }
+}
